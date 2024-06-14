@@ -10,7 +10,7 @@ services:
     volumes:
       - vprodbdata:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=dbpass
+      - MYSQL_ROOT_PASSWORD=vprodbpass
 
   vprocache01:
     image: memcached
@@ -35,7 +35,7 @@ services:
     volumes:
       - vproappdata:/usr/local/tomcat/webapps
 
-  vproapp:
+  vproweb:
     build:
       context: ./Docker-files/web/
     image: shreyas033/vprofileweb
